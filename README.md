@@ -6,7 +6,7 @@ This script will rename files in this format: `S01 Mobile Devices - E02 Laptop H
 
 [![Before and After](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_smaller.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_large.png)
 
-[![Series and Episodes](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.PNG)
+
 
 
 # Program Structure
@@ -42,12 +42,11 @@ This script will rename files in this format: `S01 Mobile Devices - E02 Laptop H
 2) Check that there aren't any IDENTICAL series and episode names in the TOC.txt. If there are, the script will get confused and the files won't map correctly. If this happens, rename the episode (i.e. just put a 1 at the end of it. So, if there's a series called "Networking" and an episode (anywhere in the course) also called "Networking", you'd rename the episode to "Networking1" or "Networking_" or similar).  
 **_You do not need to do ANYTHING to the formatting. Don't reorder any lines, don't move the series names around, don't take the series names out. The script will do everything to process the names._**  
 
-
 It should look like this:  
-[![TOC.txt](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annotated.png)
+[![TOC.txt](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.png)
 
 3) Populate `path_TOC` with the path to the `TOC.txt` file you created via copy/pasting the headings from the `overview.html` supplied in the Packt course .zip folder.  
-![variable_strings](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/paths_string_options_.png)
+![variable_strings](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/path_string_options_.png)
 
 4) Update the series dictionary with the series / module names only (the final string).
 ![Series Dictionary](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_dictionary_.png)
