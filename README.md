@@ -1,7 +1,8 @@
 # Intro rename_packt_vids
 This is a simple script, written in 'Novice Python', to perform the fairly niche task of renaming Packt video course files according to the module (series) and episode title. 
 
-Packt video course files are named formulaically: `video1_2.mp4` is (Series / Module 1, Episode 2). This script will rename files `S01 Mobile Devices - E02 Laptop Hardware and Components.mp4`. This use of `Sxx` and `Exx` is designed to feed into [whisper_wrapper](www.github.com/gorbash1370/whisper_wrapper) which will automatically detect `S01` and `E02` to populate the header fields in the transcript.  
+Packt video course files are named formulaically: `video1_2.mp4` is (Series / Module 1, Episode 2).  
+This script will rename files in this format: `S01 Mobile Devices - E02 Laptop Hardware and Components.mp4`. This use of `Sxx` and `Exx` is designed to feed into [whisper_wrapper](www.github.com/gorbash1370/whisper_wrapper) which will automatically detect `S01` and `E02` to populate the header fields in the transcript from the audio or video file name. 
 
 [![Before and After](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_smaller.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_large.png)
 
@@ -43,13 +44,13 @@ Packt video course files are named formulaically: `video1_2.mp4` is (Series / Mo
 
 
 It should look like this:  
-[![TOC.txt](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.png)
+[![TOC.txt](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annotated.png)
 
 3) Populate `path_TOC` with the path to the `TOC.txt` file you created via copy/pasting the headings from the `overview.html` supplied in the Packt course .zip folder.  
-![variable_strings](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/paths_string_options.png)
+![variable_strings](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/paths_string_options_.png)
 
 4) Update the series dictionary with the series / module names only (the final string).
-![Series Dictionary](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_dictionary.png)
+![Series Dictionary](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_dictionary_.png)
 
 5) Populate `path_folder` with the path to the folder containing the video files you want to rename.    
 6) Specify the `ext` variable with the file extension of the video files you want to rename (i.e. `.mp4`).  
