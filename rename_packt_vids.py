@@ -37,7 +37,7 @@ double_newline = "\n\n"
 spaces4 = "    "
 spaces8 = "        "
 TOCsplitstripped = [s.replace(double_newline, "").replace(spaces4, "").replace(spaces8, "") for s in TOCsplit]
-TOCsplitstripped = [item for item in TOCsplitstripped if item != ''] # remove empty strings
+TOCsplitstripped = [item.strip() for item in TOCsplitstripped if item != ''] # remove empty strings and any leading/trailing whitespace around the strings
 print(f"{TOCsplitstripped}\n")
 # List of strings containing both the Series names and the Episode names mixed.
 

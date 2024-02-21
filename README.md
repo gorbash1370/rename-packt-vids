@@ -10,8 +10,6 @@ This use of `Sxx` and `Exx` is designed to feed into [whisper_wrapper](www.githu
 [![Before and After](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_smaller.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_large.png)
 
 
-
-
 # Program Structure
 * Single file `rename_packt_videos.py`.  
 
@@ -70,8 +68,6 @@ And it's good to go!
   </a>
 </p>
 
-
-
 It is important to understand that the transfer of new filename > video file is only partially intelligent. The script DOES pick out the series names and use these correctly for the `Sxx` part of the filename. And it does enforce strict alphanumeric ordering of the video file processing order (by adding a leading 0 before single digit numbers). 
 
 But, episodes just map in the order they appear in TOC.txt onto the strictly ascending alphanumeric order of the video files, 1:1. Therefore:
@@ -82,7 +78,6 @@ But, episodes just map in the order they appear in TOC.txt onto the strictly asc
 
 # gorbash1370 Disclaimer
 This is an amateur project built mainly for coding practice, therefore please always inspect code before running. Use at your own risk!
-
 
 # Licence
 [Licence](https://github.com/gorbash1370/rename_packt_vids/tree/main/LICENSE)
