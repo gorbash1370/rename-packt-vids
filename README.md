@@ -1,8 +1,11 @@
 # Intro rename_packt_vids
-This is a simple script, written in 'Novice Python', to perform the fairly niche task of renaming Packt video course files according to the module (series) and episode title. 
+This simple script performs the fairly niche task of renaming Packt video course files according to the module (series) and episode title. 
 
-Packt video course files are named formulaically: `video1_2.mp4` is (Series / Module 1, Episode 2).  
-This script will rename files in this format: `S01 Mobile Devices - E02 Laptop Hardware and Components.mp4`. This use of `Sxx` and `Exx` is designed to feed into [whisper_wrapper](www.github.com/gorbash1370/whisper_wrapper) which will automatically detect `S01` and `E02` to populate the header fields in the transcript from the audio or video file name. 
+Packt video course files are named formulaically: `video1_2.mp4` is ('Series' or 'Module' 1, Episode 2).  
+
+This script will rename files to this format: `S01 Mobile Devices - E02 Laptop Hardware and Components.mp4`.  
+
+This use of `Sxx` and `Exx` is designed to feed into [whisper_wrapper](www.github.com/gorbash1370/whisper_wrapper) which will automatically detect `S01` and `E02` to populate the header fields in the transcript from the audio or video file name. 
 
 [![Before and After](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_smaller.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_large.png)
 
@@ -30,9 +33,9 @@ This script will rename files in this format: `S01 Mobile Devices - E02 Laptop H
 * Script only works for this EXACT format of file names: `video1_1.mp4`, `video1_2.mp4`, `video1_3.mp4` etc, where `video1` means `series1` and the final `1.mp4`/`2.mp4`/`3.mp4` are the episode numbers. All the Packt downloaded videos I've seen follow this format.
 * The word 'series' has been used throughout to maintain compatiblity with the [whisper_wrapper](https://github.com/gorbash1370/whisper_wrapper), however these can be thought of as 'modules' into which the course is divided. 
 * There is no error handling. 
-* Recommendation: copy the originally-named video files into a separate 'backup' folder (Packt supply their video files in zip, so there will always be a backup if the zip is kept after extraction) just incase there is an error with the renaming process. 
+* Recommendation: copy the originally-named video files into a separate 'backup' folder just incase there is an error with the renaming process. Packt supply their video files in zip, so there will always be a backup if the zip is kept after extraction.  
 * Recommendation: When the rename is complete, check the filesizes of the renamed videos, in sorted order, against the ordered filesizes in 'backup' folder. Exact matches indicate files have been renamed correctly.
-    - Alternatively, comment out the lines `os.rename(os.path.join(path_folder, file), os.path.join(path_folder, new_name))`, run the script and check the print statements to verify that the new names are correct. Then, uncomment the `os.rename` lines and run the script again to rename the files.
+    - Alternatively, as a first pass run the script with the the lines `os.rename(os.path.join(path_folder, file), os.path.join(path_folder, new_name))` commented out and check the print statements to verify that the new names are correct. Then, uncomment the `os.rename...` lines and run the script again to actually rename the files on disc.
 * There are a lot of terminal print statements, in order to verify at every stage that the correct renaming is taking place. They can always be commented out once you're happy with how the script works.
 
 
@@ -58,9 +61,16 @@ And it's good to go!
 
 
 # Notes about the TOC.txt file
-[![overview.html Annotated](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_large.PNG)  
+<p float="left">
+  <a href="https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_large.PNG">
+    <img src="https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_small.PNG" alt="overview.html Annotated" width="45%" />
+  </a>
+  <a href="https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.PNG">
+    <img src="https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small_annot.png" alt="TOC.txt Annotated" width="45%" />
+  </a>
+</p>
 
-[![TOC.txt Annotated](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.PNG)   
+
 
 It is important to understand that the transfer of new filename > video file is only partially intelligent. The script DOES pick out the series names and use these correctly for the `Sxx` part of the filename. And it does enforce strict alphanumeric ordering of the video file processing order (by adding a leading 0 before single digit numbers). 
 
@@ -84,3 +94,8 @@ This is an amateur project built mainly for coding practice, therefore please al
 - [BuyMeACawfee](https://www.buymeacoffee.com/gorbash1370)
 
 _Last code update 2024-02-21_
+
+
+[![overview.html Annotated](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_large.PNG)  
+
+[![TOC.txt Annotated](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.PNG)   
