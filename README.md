@@ -2,9 +2,9 @@
 This is a simple script, written in 'Novice Python', to perform the fairly niche task of renaming Packt video course files according to the module (series) and episode title. 
 
 Packt video course files are named formulaically: `video1_2.mp4` is (Series / Module 1, Episode 2). This script will rename files `S01 Mobile Devices - E02 Laptop Hardware and Components.mp4`. This use of `Sxx` and `Exx` is designed to feed into [whisper_wrapper](www.github.com/gorbash1370/whisper_wrapper) which will automatically detect `S01` and `E02` to populate the header fields in the transcript.  
-[![Series and Episodes](https://github.com/gorbash1370/rename_packt_vids/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/misc/TOC_txt_large_annot.png)
+[![Series and Episodes](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.png)
 
-[![Before and After](https://github.com/gorbash1370/rename_packt_vids/misc/before_after_smaller.png)](https://github.com/gorbash1370/rename_packt_vids/misc/before_after_large.png)
+[![Before and After](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_smaller.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/before_after_large.png)
 
 
 # Program Structure
@@ -36,19 +36,19 @@ Packt video course files are named formulaically: `video1_2.mp4` is (Series / Mo
 
 # User setup
 1) Create a `TOC.txt` (Table of Contents) file: open `overview.html` Packt supplies, copy the module/series and filenames, paste into a text file.  
-[![Overview.html to TOC.txt](https://github.com/gorbash1370/rename_packt_vids/misc/overview_html_to_TOC_text_small.png)](https://github.com/gorbash1370/rename_packt_vids/misc/overview_html_to_TOC_text_large.png)  
+[![Overview.html to TOC.txt](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/overview_html_to_TOC_text_small.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/overview_html_to_TOC_text_large.png)  
 2) Check that there aren't any IDENTICAL series and episode names in the TOC.txt. If there are, the script will get confused and the files won't map correctly. If this happens, rename the episode (i.e. just put a 1 at the end of it. So, if there's a series called "Networking" and an episode (anywhere in the course) also called "Networking", you'd rename the episode to "Networking1" or "Networking_" or similar).  
 **_You do not need to do ANYTHING to the formatting. Don't reorder any lines, don't move the series names around, don't take the series names out. The script will do everything to process the names._**  
-[![overview_to_TOC.txt](https://github.com/gorbash1370/rename_packt_vids/misc/overview_html_to_TOC_text_small.png)](https://github.com/gorbash1370/rename_packt_vids/misc/overview_html_to_TOC_text_large.png)  
+[![overview_to_TOC.txt](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/overview_html_to_TOC_text_small.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/overview_html_to_TOC_text_large.png)  
 
 It should look like this:  
-[![TOC.txt](https://github.com/gorbash1370/rename_packt_vids/misc/TOC_txt_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/misc/TOC_txt_large_annot.PNG)
+[![TOC.txt](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.PNG)
 
 3) Populate `path_TOC` with the path to the `TOC.txt` file you created via copy/pasting the headings from the `overview.html` supplied in the Packt course .zip folder.  
-![variable_strings](https://github.com/gorbash1370/rename_packt_vids/misc/paths_string_options)
+![variable_strings](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/paths_string_options)
 
 4) Update the series dictionary with the series / module names only (the final string).
-![Series Dictionary](https://github.com/gorbash1370/rename_packt_vids/misc/series_dictionary.png)
+![Series Dictionary](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_dictionary.png)
 
 5) Populate `path_folder` with the path to the folder containing the video files you want to rename.    
 6) Specify the `ext` variable with the file extension of the video files you want to rename (i.e. `.mp4`).  
@@ -57,9 +57,9 @@ And it's good to go!
 
 
 # Notes about the TOC.txt file
-[![overview.html Annotated](https://github.com/gorbash1370/rename_packt_vids/misc/series_episodes_annot_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/misc/series_episodes_annot_large.PNG)  
+[![overview.html Annotated](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_large.PNG)  
 
-[![TOC.txt Annotated](https://github.com/gorbash1370/rename_packt_vids/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/misc/TOC_txt_large_annot.PNG)   
+[![TOC.txt Annotated](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.PNG)   
 
 It is important to understand that the transfer of new filename > video file is only partially intelligent. The script DOES pick out the series names and use these correctly for the `Sxx` part of the filename. And it does enforce strict alphanumeric ordering of the video file processing order (by adding a leading 0 before single digit numbers). 
 
@@ -74,7 +74,7 @@ This is an amateur project built mainly for coding practice, therefore please al
 
 
 # Licence
-[Licence](https://github.com/gorbash1370/rename_packt_vids/LICENSE)
+[Licence](https://github.com/gorbash1370/rename_packt_vids/tree/main/LICENSE)
 
 
 # If you enjoy this project...
