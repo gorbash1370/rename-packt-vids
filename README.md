@@ -94,8 +94,3 @@ This is an amateur project built mainly for coding practice, therefore please al
 - [BuyMeACawfee](https://www.buymeacoffee.com/gorbash1370)
 
 _Last code update 2024-02-21_
-
-
-[![overview.html Annotated](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_small.PNG)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/series_episodes_annot_large.PNG)  
-
-[![TOC.txt Annotated](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_small_annot.png)](https://github.com/gorbash1370/rename_packt_vids/blob/main/misc/TOC_txt_large_annot.PNG)   
